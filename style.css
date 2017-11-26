@@ -1,0 +1,207 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26/11/2017, 02:06:18
+    Author     : daniel
+*/
+
+body{padding-top:50px;padding-bottom:20px}.body-content{padding-left:15px;padding-right:15px}.carousel-caption p{font-size:20px;line-height:1.4}.carousel-inner .item img[src$=".svg"]{width:100%}#qrCode{margin:15px}@media screen and (max-width:767px){.carousel-caption{display:none}}
+
+
+/* .slider
+{
+        margin: auto;
+        overflow:hidden;
+        width: 900px;
+}
+.slider ul
+{
+        display: flex;
+        width: 400%;
+
+        animation: cambio;
+        animation-duration: 25s;
+        animation-iteration-count: infinite;
+
+}
+.slider li
+{
+        width: 100%;
+        list-style: none;
+}
+.slider img
+{
+        width: 100%;
+        opacity:0.2;
+}
+
+@keyframes cambio
+{
+        0% 
+        {
+                margin-left: 0%;
+        }
+
+        25%
+        {
+                margin-left: -100%;
+        }
+        50%
+        {
+                margin-left: -200%;
+        }
+        75%
+        {
+                margin-left: -300%;
+        }
+        100% 
+        {
+                margin-left: 0%;
+        }
+} */
+
+footer{
+        text-align: center;
+        padding: 0 0 1% 0;
+}
+
+.card-img-top{
+        width: 100%;
+}
+
+.card{
+        display: inline-block;
+        border: 1px solid rgb(177, 177, 177);
+        border-radius: 3px;
+        margin: 1%;        
+        text-align: center;
+        color: black;
+        -webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.74);
+        -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.74);
+        box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.74);
+}
+
+
+.tamanho-forms{
+        width: 50%;
+}
+
+a.link {
+        text-decoration: none;
+    }
+
+#appearance-select{
+        height: 40px;
+        background-color: rgb(221, 221, 221);
+        margin-top: 1%;
+}
+
+
+.janela-login-singin{
+        width: 50%;
+}
+
+.campo-busca{
+        margin-top: 0.7%;
+        width: 40%;
+        position: relative;
+        float: left;
+}
+
+.dropdown-menu{
+        background-color: white;
+        border: 1px solid rgb(131, 131, 131);
+}
+.dropdown-menu ul li a{
+        text-decoration: none;
+        color: rgb(0, 0, 0)
+
+}
+
+
+/* Inicio teste */
+
+
+#lateral {
+	padding:0 50px 0 0;
+	-moz-transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 1.7s ease;
+        
+        font-size:1.0em;
+	background:rgb(44,62,80);
+	background-image: -moz-linear-gradient(50deg, rgb(121, 121, 121), rgb(255, 255, 255));
+        background-image: -webkit-linear-gradient(50deg, rgb(121, 121, 121), rgb(255, 255, 255));
+        background-image: -o-linear-gradient(50deg, rgb(121, 121, 121), rgb(255, 255, 255));
+        background-image: -ms-linear-gradient(50deg, rgb(121, 121, 121), rgb(255, 255, 255));
+        background-image: linear-gradient(50deg, rgb(121, 121, 121), rgb(255, 255, 255));
+	height:100%;
+	width:220px; 
+	position:fixed;
+	top:0;
+	left:-220px;
+}
+        
+#lateral .box {
+        list-style-type:none;
+        font-style:normal;
+        margin: 1em 0 2em 1em;
+        color:rgb(0, 0, 0);
+}
+
+
+#menu {
+        position:relative;
+        font-size:1.0em;
+        margin:1em 0 1em 0;
+        padding:0;
+}
+
+#menu li {
+        padding:15%;
+        margin:0 0 0 -35%;
+
+}
+
+#menu li a, #menu li a:link {
+        font-size: 1.2em;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        display: block;
+        -moz-transition: all 1.2s ease;
+        -webkit-transition: all 1.2s ease;
+        -o-transition: all 1.2s ease;
+        transition: all 1.2s ease;
+}
+
+/* #menu li a:hover {
+        color:rgb(255,255,255);
+        background-color:rgba(255,255,255,0.2);
+        -moz-transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+} */
+
+
+.card-title{
+        font-size:12px;
+        color: rgb(0, 0, 0);
+        display: inline
+}
+
+
+.my-btn{
+        background-color: rgb(15, 24, 34);
+        color: rgb(255, 255, 255);
+}
+
+.my-btn:hover{
+        background-color: rgb(8, 14, 20);
+        color: rgb(255, 255, 255);
+}
+
