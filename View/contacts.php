@@ -8,14 +8,13 @@ and open the template in the editor.
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Meus filmes</title>
+        <title>Filmes Vistos</title>
 
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
             asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
             asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="../style.css" asp-append-version="true" />
     </head>
-    
     <body>
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
@@ -54,7 +53,6 @@ and open the template in the editor.
                 </div>
             </div>
         </nav>
-        
         <!-- Incicio barra lateral -->
         <div class="container">
             <div class="row">
@@ -110,39 +108,25 @@ and open the template in the editor.
                     </div>
                 </div >
                 <div class="col-md-10">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h2 style="text-align: center"><b>Minha Lista</b></h2>
+                    <h2 style="text-align:center"><b>@ViewData["Message"]</b></h2>
+                    <hr>
 
-                                <a class="btn  my-btn" asp-controller="Filmes" asp-action="Adicionar"> 
-                                    Encontrar Novo Filme
-                                </a>
+                    <address>
+                        One Microsoft Way<br />
+                        Redmond, WA 98052-6399<br />
+                        <span>P:</span>425.555.0100
+                    </address>
 
-                                <hr>
-                                    <div class="card" style="width: 16.5rem;">
-                                        <p>Opcao usuario</p>
-                                        <a href="#" data-value="@item.Id" class="btnInfo"> 
-                                            <img class="card-img-top" src="@Html.DisplayFor(modelItem => item.Poster)" alt="Card image cap">
-                                        </a>
+                    <address>
+                        <strong>Suporte:</strong> <a href="mailto:Support@example.com">daniel-costa@ufu.br</a><br />
+                        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">dani.coen@hotmail.com</a>
 
-                                        <div>
-                                            <p class="card-title">Titulo</p>
-                                        </div>
-                                        <a href="#" data-value="@item.Id" class="btnRemove">
-                                            Remover
-                                        </a>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                    
+                        <h5 style="text-align:center"><b>Mais informações podem ser encontradas no espetacular site: www.google.com.br<b><h5>
+                    </address>
                 </div>
             </div>
         </div>
         <!-- FIm barra lateral -->
-        
-        
         
         <environment include="Development">
             <script src="~/lib/jquery/dist/jquery.js"></script>
@@ -164,26 +148,5 @@ and open the template in the editor.
             </script>
             <script src="../js.js" asp-append-version="true"></script>
         </environment>
-        
     </body>
 </html>
-
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div id="details"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div id="remove"></div>
-            </div>
-        </div>
-    </div>
-</div>

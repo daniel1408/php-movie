@@ -8,14 +8,13 @@ and open the template in the editor.
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Meus filmes</title>
+        <title>Meu TOP 10</title>
 
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
             asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
             asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="../style.css" asp-append-version="true" />
     </head>
-    
     <body>
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
@@ -54,7 +53,6 @@ and open the template in the editor.
                 </div>
             </div>
         </nav>
-        
         <!-- Incicio barra lateral -->
         <div class="container">
             <div class="row">
@@ -113,36 +111,29 @@ and open the template in the editor.
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-12">
-                                <h2 style="text-align: center"><b>Minha Lista</b></h2>
-
-                                <a class="btn  my-btn" asp-controller="Filmes" asp-action="Adicionar"> 
-                                    Encontrar Novo Filme
-                                </a>
-
+                                <h2 style="text-align: center"><b>Meu Top 10</b></h2>
+                                <h4 style="text-align: center">Ordenados por nota do IMDB</h4>
                                 <hr>
-                                    <div class="card" style="width: 16.5rem;">
-                                        <p>Opcao usuario</p>
-                                        <a href="#" data-value="@item.Id" class="btnInfo"> 
-                                            <img class="card-img-top" src="@Html.DisplayFor(modelItem => item.Poster)" alt="Card image cap">
-                                        </a>
-
+                                
+                                    <div class="card" style="width: 20rem;">
                                         <div>
-                                            <p class="card-title">Titulo</p>
+                                            @Html.DisplayFor(modelItem => item.Title)
                                         </div>
-                                        <a href="#" data-value="@item.Id" class="btnRemove">
-                                            Remover
+
+                                        <a href="#" data-value="@item.Id" class="btnInfo">
+                                            <img class="card-img-top    " src="@Html.DisplayFor(modelItem => item.Poster)" alt="Card image cap">
                                         </a>
+                                        <div>
+                                            <h4>IMDB: <b> @Html.DisplayFor(modelItem => item.imdbRating)</b></h4>
+                                        </div>                    
                                     </div>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
         <!-- FIm barra lateral -->
-        
-        
         
         <environment include="Development">
             <script src="~/lib/jquery/dist/jquery.js"></script>
@@ -164,7 +155,6 @@ and open the template in the editor.
             </script>
             <script src="../js.js" asp-append-version="true"></script>
         </environment>
-        
     </body>
 </html>
 
