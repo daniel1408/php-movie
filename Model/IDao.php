@@ -7,10 +7,15 @@
  */
 
 /**
- * Description of HomeController
  *
  * @author daniel
  */
-class HomeController {
+interface IDao {
     //put your code here
+    public function  insert( $object);
+    public function  delete( $object);
+    public function  update( $object);
+    public function  select( $object);
+    public function  selectAll();
+    public function selectLike($texto);
 }
