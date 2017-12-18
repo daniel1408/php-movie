@@ -1,19 +1,16 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<?php
+    session_start();
+    if(isset($_SESSION['user']) && isset($_SESSION['pwd'])){
+?>
+
 <html>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Home</title>
 
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-            asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-            asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="style.css" asp-append-version="true" />
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="../style.css">
     </head>
     
     <body>        
@@ -37,19 +34,29 @@ and open the template in the editor.
 
 
                     <ul class="nav navbar-nav" style="position:relative; float:right;">
-                            <li><a asp-area="" asp-controller="Home" asp-action="Logout">Logout</a></li>
                             <li>
-                                <a href="View/System/login.php" class="btnLogin">
+                                <a href="logout.php">
+                                    Logout
+                                </a>
+                            </li>
+                            <?php
+                                if(!isset($_SESSION['user']) && !isset($_SESSION['user'])){
+                            ?>
+                            <li>
+                                <a href="login.php" class="btnLogin">
                                 <!-- <a asp-area="" asp-controller="Home" asp-action="Login"> -->
                                     Entrar
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="btnSing">
+                                <a href="sign.php" class="btnSing">
                                 <!-- <a asp-area="" asp-controller="Home" asp-action="Sing"> -->
                                     Criar Conta
                                 </a>
                             </li>
+                            <?php
+                                }
+                            ?>
                     </ul>
                 </div>
             </div>
@@ -70,38 +77,45 @@ and open the template in the editor.
                                     </a>
                                 </li>
                                     <li>
-                                        <a asp-controller="Filmes" asp-action="Listar">
+                                        <!--
+                                        <a href="./index.php/myController/myActio/?id=1" 
+                                        class="btn btn-success btn-block">mylinktext</a>
+                                        -->
+                                        <!--
+                                        <form action="caminho/ProdutoController/insere" >
+                                        -->                                       
+                                        <a href="list.php">
                                             Meus Filmes
                                         </a>
                                     </li>
                                     <li>
-                                        <a asp-controller="Filmes" asp-action="Ranking">
+                                        <a href="ranking.php">
                                             Meu Top 10
                                         </a>
                                     </li>
                                     <li>
-                                        <a asp-controller="Filmes" asp-action="Recomendations">
+                                        <a href="recomendations.php">
                                             Recomendações
                                         </a>
                                     </li>
                                     <li>
-                                        <a asp-controller="Filmes" asp-action="NaoVistos">
+                                        <a href="not-seen.php">
                                             Não vistos
                                         </a>
                                     </li>
                                     <li>
-                                        <a asp-controller="Filmes" asp-action="Vistos">
+                                        <a href="seen.php">
                                             Vistos
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a asp-controller="Home" asp-action="About">
+                                        <a href="about.php">
                                             Sobre o Site
                                         </a>
                                     </li>
                                     <li>
-                                        <a asp-controller="Home" asp-action="Contact">
+                                        <a href="contacts.php">
                                             Contatos
                                         </a>
                                     </li>
@@ -111,7 +125,10 @@ and open the template in the editor.
                     </div>
                 </div >
                 <div class="col-md-10">
-                    <h2 class="container-fluid"><b>Olá </b></h2>
+                    <div style="color: black;">
+                        <h2 class="container-fluid text-center"><b>Olá  <?php echo ($_SESSION['user']) ?> </b></h2>
+                    </div>
+                    
                     <div class="container-fluid">
                         <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
                             <ol class="carousel-indicators">
@@ -161,7 +178,7 @@ and open the template in the editor.
         <environment include="Development">
             <script src="~/lib/jquery/dist/jquery.js"></script>
             <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-            <script src="js.js" asp-append-version="true"></script>
+            <script src="../js.js" asp-append-version="true"></script>
         </environment>
         <environment exclude="Development">
             <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
@@ -176,8 +193,12 @@ and open the template in the editor.
                     crossorigin="anonymous"
                     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
             </script>
-            <script src="js.js" asp-append-version="true"></script>
+            <script src="../js.js" asp-append-version="true"></script>
         </environment>
         
     </body>
 </html>
+<?php
+    } else {
+        header("location: ../index.php");
+    }

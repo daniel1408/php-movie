@@ -12,18 +12,17 @@
 
     $controller->{ $action }();
   }
-  
-    $controllers = array('home' => ['home', 'login, sign, about, '
-      . 'addMovie, deleteMovie, detailsMovie, listMovie, notSeen, '
-      . 'recomendations, seen, ranking, contacts']);
+
+  $controllers = array('home' => ['login', 'sign, about, addMovie, deleteMovie,'
+        . 'detailsMovie, notSeen, home, recomendations, seen, ranking, contacts']);
 
   
   if (array_key_exists($controller, $controllers)) {
     if (in_array($action, $controllers[$controller])) {
       call($controller, $action);
     } else {
-      call('home', 'home');
+      call('home', 'login');
     }
   } else {
-    call('home', 'home');
+    call('home', 'login');
   }

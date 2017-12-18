@@ -130,7 +130,7 @@ a.link {
 	-moz-transition: all 0.5s ease;
         -webkit-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
-        transition: all 1.7s ease;
+        transition: all 0.5s ease;
         
         font-size:1.0em;
 	background:rgb(44,62,80);

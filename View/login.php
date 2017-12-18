@@ -1,4 +1,3 @@
-
 <html>
     <head>
         <meta charset="utf-8" />
@@ -11,14 +10,14 @@
         <link rel="stylesheet" href="style.css" asp-append-version="true" />
     </head>
     
-    <body>
+    <body style="background-repeat: repeat ; background-image: url(https://images2.alphacoders.com/763/763351.png); color: black;">
         <form method="post" action="?go=logar">
-            <div class="container" style="width:75%; margin: 0 auto">
+            <div class="container" style="width:45%; margin: 0 auto">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="panel-heading">
                             <div class="panel-title text-center">
-                                <h3 class="title"><b>Entrar</b></h3>
+                                <h3 class="title" ><b>Entrar</b></h3>
                                 <hr />
                             </div>
                         </div> 
@@ -41,18 +40,15 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="pwstrength_viewport_progress"></div>
                         <input type="submit" value="Entrar" class="btn my-btn btn-block" id="entrar">
-
-                        <a asp-controller="Home" asp-action="Login" class="btn btnSing">Não tenho conta</a>
+                        <a href="./View/sign.php" class="btn btnSing">Não tenho conta</a>
                     </div>
                 </div>
             </div>
         </form>
     </body>
 </html>
-
+    
 <?php
 if(@$_GET['go'] == 'logar'){
 	$user = $_POST['username'];
@@ -63,8 +59,9 @@ if(@$_GET['go'] == 'logar'){
 	}elseif(empty($pwd)){
 		echo "<script>alert('Preencha todos os campos para logar-se.'); history.back();</script>";
 	}else{
+                
                 spl_autoload_register(function ($class_name) {
-                    include '../Model/' . $class_name . '.php';
+                    include './Model/' . $class_name . '.php';
                 });
                 
                 try {

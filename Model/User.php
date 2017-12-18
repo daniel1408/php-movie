@@ -7,11 +7,11 @@
  */
 
 /**
- * Description of movie
+ * Description of Autor
  *
  * @author daniel
  */
-class user {
+class User {
     function getId() {
         return $this->id;
     }
@@ -22,6 +22,10 @@ class user {
 
     function getLogin() {
         return $this->login;
+    }
+
+    function getEmail() {
+        return $this->email;
     }
 
     function getSenha() {
@@ -38,6 +42,10 @@ class user {
 
     function setLogin($login) {
         $this->login = $login;
+    }
+
+    function setEmail($email) {
+        $this->email = $email;
     }
 
     function setSenha($senha) {

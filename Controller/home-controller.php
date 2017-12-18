@@ -14,11 +14,11 @@
 class HomeController {
     //put your code here
     public function login() {
-      require_once('View/System/login.php');
+      require_once('View/login.php');
     }
 
     public function sign() {
-      require_once('View/System/sing.php');
+      require_once('View/sign.php');
     }
     
     public function about() {
