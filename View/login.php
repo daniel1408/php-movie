@@ -1,16 +1,12 @@
 <html>
     <head>
+        <title>Login</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Login</title>
-
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-            asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-            asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="style.css" asp-append-version="true" />
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="./style.css" asp-append-version="true" />
     </head>
-    
-    <body style="background-repeat: repeat ; background-image: url(https://images2.alphacoders.com/763/763351.png); color: black;">
+    <body style="color: black;">
         <form method="post" action="?go=logar">
             <div class="container" style="width:45%; margin: 0 auto">
                 <div class="row">

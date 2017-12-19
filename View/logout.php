@@ -9,7 +9,7 @@
         <title>Logout</title>
         <link rel="stylesheet" type="text/css" href="../style.css">
     </head>
-    <body style="background-image: url(https://hdwallpaper20.com/wp-content/uploads/2017/08/Play-Wonder-Woman-Full-Movie-An-Amazon-princess-comes-to-the-world-of-Man-to-become-the-greatest-of-wallpaper-wp2009036.jpg); color: white">
+    <body style="color: white">
         <div class="container">
             <?php
                 session_start();

@@ -1,15 +1,12 @@
 <html>
     <head>
+        <title>Criar Conta</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Criar Conta</title>
-
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-            asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-            asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="../style.css" asp-append-version="true" />
     </head>
-    <body style="background-image: url(https://hdwallpaper20.com/wp-content/uploads/2017/08/Play-Wonder-Woman-Full-Movie-An-Amazon-princess-comes-to-the-world-of-Man-to-become-the-greatest-of-wallpaper-wp2009036.jpg);">
+    <body style="color: black">
         <div class="form-horizontal">
             <form method="post" action="?go=cadastrar">
                 <div class="container" style="width:45%; margin: 0 auto">

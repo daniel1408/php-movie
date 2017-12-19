@@ -11,7 +11,7 @@
  *
  * @author daniel
  */
-require_once('User.php');
+require_once('IDao.php');
 
 class UserDao implements IDao{
     //put your code here

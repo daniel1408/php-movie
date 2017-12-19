@@ -11,9 +11,9 @@
  *
  * @author daniel
  */
-require_once('User.php');
+require_once('IDao.php');
 
-class UserDao implements IDao{
+class MovieDao implements IDao{
     //put your code here
     public function connectionString(){
         ini_set('default_charset', 'UTF-8');
@@ -23,23 +23,24 @@ class UserDao implements IDao{
         return $conn;
     }           
     
-    public function selectForUserName( $username) {
-        $conn = UserDao::connectionString();
-        $stmt = $conn->prepare("SELECT * FROM user where login = '$username'");
+    public function selectAll() {
+        $conn = MovieDao::connectionString();
+        $stmt = $conn->prepare("SELECT * FROM movie order by Title");
         $stmt->execute();
         return $stmt;
+        
     }
     
-    public function login( $username, $password) {
-        $conn = UserDao::connectionString();
-        $stmt = $conn->prepare("SELECT * FROM user WHERE login = '$username' and senha = '$password'");
+    public function selectLike($texto) {
+        $conn = MovieDao::connectionString();
+        $stmt = $conn->prepare("SELECT * FROM movie where Title like '$texto%' order by id");
         $stmt->execute();
         return $stmt;
     }
     
     public function insert( $object) {
-        $conn = UserDao::connectionString();
-        $stmt = $conn->prepare("insert into user (nome, email, login, senha) values ('$object->nome','$object->email','$object->login','$object->senha')");
+        $conn = MovieDao::connectionString();
+        $stmt = $conn->prepare("insert into frase (id, Title, Year, Rated, Poster) values(1, '$object->Title','$object->Year','$object->Rated', '$object->Poster');");
         $stmt->execute();
     }
 
@@ -48,14 +49,6 @@ class UserDao implements IDao{
     }
 
     public function select($object) {
-        
-    }
-
-    public function selectAll() {
-        
-    }
-
-    public function selectLike($texto) {
         
     }
 

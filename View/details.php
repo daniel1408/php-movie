@@ -6,16 +6,9 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />        
         <title>Detalhes</title>
-
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-            asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-            asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="../style.css" asp-append-version="true" />
+        <?php require_once ("Shared/imports.php"); ?>
     </head>
-    
     <body>
         <div class="container">
             <div style="width:48%;">
