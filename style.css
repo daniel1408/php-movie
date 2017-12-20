@@ -156,7 +156,6 @@ a.link {
 #menu li {
         padding:15%;
         margin:0 0 0 -35%;
-
 }
 
 #menu li a, #menu li a:link {
@@ -169,16 +168,6 @@ a.link {
         -o-transition: all 1.2s ease;
         transition: all 1.2s ease;
 }
-
-/* #menu li a:hover {
-        color:rgb(255,255,255);
-        background-color:rgba(255,255,255,0.2);
-        -moz-transition: all 0.5s ease;
-        -webkit-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
-        transition: all 0.5s ease;
-} */
-
 
 .card-title{
         font-size:12px;

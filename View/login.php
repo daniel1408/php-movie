@@ -6,17 +6,15 @@
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="./style.css" asp-append-version="true" />
     </head>
-    <body style="color: black;">
+    <body style="background-color: #F2F2F2; color: black;">
+        <div class="panel-title text-center">
+            <img src="https://leipglo.files.wordpress.com/2015/05/moviesomu.png?w=300&resize=300%2C223" style="width: 140px">
+            <h3 class="title" ><b>Login</b></h3>
+        </div>
         <form method="post" action="?go=logar">
-            <div class="container" style="width:45%; margin: 0 auto">
+            <div class="container" style="width:25%; margin: 0 auto; background-color: white; padding: 15px; border-radius: 10px ">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="panel-heading">
-                            <div class="panel-title text-center">
-                                <h3 class="title" ><b>Entrar</b></h3>
-                                <hr />
-                            </div>
-                        </div> 
                         <div class="form-group">
                             <label for="username" class="cols-sm-2 control-label">Username</label>
                             <div class="cols-sm-10">
@@ -37,9 +35,12 @@
                             </div>
                         </div>
                         <input type="submit" value="Entrar" class="btn my-btn btn-block" id="entrar">
-                        <a href="./View/sign.php" class="btn btnSing">Não tenho conta</a>
                     </div>
                 </div>
+            </div>
+            <div class="container" style="width:25%; margin: 0 auto; background-color: white; margin-top: 20px; padding: 3px; text-align: center;  border-radius: 10px">
+                <b>Novo no site?</b>
+                <a href="./View/sign.php" class="btn btnSing">Crie uma conta</a>
             </div>
         </form>
     </body>

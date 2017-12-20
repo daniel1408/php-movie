@@ -25,19 +25,35 @@ and open the template in the editor.
                                 <h2 style="text-align: center"><b>Meu Top 10</b></h2>
                                 <h4 style="text-align: center">Ordenados por nota do IMDB</h4>
                                 <hr>
-                                
-                                    <div class="card" style="width: 20rem;">
-                                        <div>
-                                            @Html.DisplayFor(modelItem => item.Title)
-                                        </div>
+                                <?php
+//                                    spl_autoload_register(function ($class_name) {
+//                                        include './Model/' . $class_name . '.php';
+//                                    });
+                                require_once('../Model/MovieDao.php');
+                                try {
+                                    $stmt = MovieDao::selectAll();
+                                    while($row = $stmt->fetch()) {
+                                            if($row['userOption'] == 'Top 10'){
+                                        ?>
+                                        <div class="card" style="width: 16rem;">
+                                            <div>
+                                                <?php echo $row['Title']?>
+                                            </div>
 
-                                        <a href="#" data-value="@item.Id" class="btnInfo">
-                                            <img class="card-img-top    " src="@Html.DisplayFor(modelItem => item.Poster)" alt="Card image cap">
-                                        </a>
-                                        <div>
-                                            <h4>IMDB: <b> @Html.DisplayFor(modelItem => item.imdbRating)</b></h4>
-                                        </div>                    
-                                    </div>
+                                            <a href="#" data-value="@item.Id" class="btnInfo">
+                                                <img class="card-img-top    " src="<?php echo $row['Poster']?>">
+                                            </a>
+                                            <div>
+                                                <h5>IMDB: <b> <?php echo $row['imdbRating']?></b></h5>
+                                            </div>                    
+                                        </div>
+                                        <?php
+                                            }
+                                         }
+                                     } catch (PDOException $e) {
+                                         echo 'ERROR: ' . $e->getMessage();
+                                     }
+                                 ?>  
                             </div>
                         </div>
                     </div>

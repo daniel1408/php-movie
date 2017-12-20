@@ -44,7 +44,6 @@ and open the template in the editor.
                                         Como considera esse filme escolhido?
 
                                         <select id="selectOK" name="option" style="height: 2em; background-color:rgb(255, 255, 255); color:rgb(0, 0, 0)">
-                                            <option value="">Escolha</option>
                                             <option value="Não visto">Não visto</option>
                                             <option value="Top 10">Top 10</option>
                                             <option value="Ótimo">Ótimo</option>

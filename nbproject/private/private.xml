@@ -5,6 +5,7 @@
         <group>
             <file>file:/opt/lampp/htdocs/movie/Posts/adicionar-movie-post.php</file>
             <file>file:/opt/lampp/htdocs/movie/Model/MovieDao.php</file>
+            <file>file:/opt/lampp/htdocs/movie/View/details.php</file>
             <file>file:/opt/lampp/htdocs/movie/View/add.php</file>
             <file>file:/opt/lampp/htdocs/movie/View/list.php</file>
         </group>

@@ -4,14 +4,10 @@
  * and open the template in the editor.
  */
 
-
-$(document).ready(function () {
+$(document).ready(function () {    
     $.ajaxSetup({ cache: false });
     $(".btnInfo").click(function () {
-        
-        var id = $(this).data("value");
-
-        $("#details").load("/Filmes/Detalhes/" + id, function () {
+        $("#details").load("View/details.php", function () {
             $('#myModal').modal("show");
         });
     });
@@ -23,7 +19,7 @@ $(document).ready(function () {
         
         var id = $(this).data("value");
 
-        $("#add").load("/Filmes/Confirmation/" + id, function () {
+        $("#add").load("/Home/Confirmation/" + id, function () {
             $('#modalAdd').modal("show");
         });
     });
@@ -42,7 +38,6 @@ $(document).ready(function () {
 $(document).ready(function () {    
     $.ajaxSetup({ cache: false });
     $(".btnSing").click(function () {
-
         $("#sing").load("View/System/sing.php", function () {
             $('#modalSing').modal("show");
         });

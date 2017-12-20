@@ -49,16 +49,19 @@ and open the template in the editor.
                                         }
                                         while($row = $stmt->fetch()) {
                                 ?>
-                                <div class="card" style="width: 16.0rem;">
-                                    <p>Opcao usuario</p>
-                                    <a href="#" data-value="1" class="btnInfo"> 
+                                <div class="card" style="width: 13.0rem;">
+                                    <div style="background-color: black; color: white">
+                                        <h5>IMDB: <b> <?php echo $row['imdbRating']?></b></h5>
+                                    </div>                    
+                                    <p><?php echo $row['userOption']?></p>
+                                    <a href="details.php?id=<?php echo $row['id']?>" class="btnInfo"> 
                                         <img class="card-img-top" src="<?php echo $row['Poster']?>" alt="Card image cap">
                                     </a>
 
                                     <div>
                                         <p class="card-title"><?php echo $row['Title']?></p>
                                     </div>
-                                    <a href="#" data-value="1" class="btnRemove">
+                                    <a href="#" data-value="<?php echo $row['id']?>" class="btnRemove">
                                         Remover
                                     </a>
                                 </div>

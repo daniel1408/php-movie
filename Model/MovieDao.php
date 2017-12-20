@@ -25,7 +25,7 @@ class MovieDao implements IDao{
     
     public function selectAll() {
         $conn = MovieDao::connectionString();
-        $stmt = $conn->prepare("SELECT * FROM movie order by Title");
+        $stmt = $conn->prepare("SELECT * FROM movie order by imdbRating desc");
         $stmt->execute();
         return $stmt;
         
@@ -38,9 +38,16 @@ class MovieDao implements IDao{
         return $stmt;
     }
     
-    public function insert( $object) {
+    public function select($object) {
         $conn = MovieDao::connectionString();
-        $stmt = $conn->prepare("insert into frase (id, Title, Year, Rated, Poster) values(1, '$object->Title','$object->Year','$object->Rated', '$object->Poster');");
+        $stmt = $conn->prepare("SELECT * FROM movie where id = '$object'");
+        $stmt->execute();
+        return $stmt;    
+    }
+    
+    public function insert($object) {
+        $conn = MovieDao::connectionString();
+        $stmt = $conn->prepare("insert into movie (Title, Year, Rated, Poster, Plot, Actors, Director, Genre, Writer, Country, imdbRating, userOption) values('$object->title', '$object->year', '$object->rated', '$object->poster', '$object->plot', '$object->actors', '$object->director', '$object->genre', '$object->writer', '$object->country', '$object->imdbRating', '$object->userOption');");
         $stmt->execute();
     }
 
@@ -48,12 +55,16 @@ class MovieDao implements IDao{
         
     }
 
-    public function select($object) {
-        
-    }
-
     public function update($object) {
         
+    }
+    
+    
+    public function getRecomendations() {
+        $conn = MovieDao::connectionString();
+        $stmt = $conn->prepare("SELECT * FROM recomendations order by Title");
+        $stmt->execute();
+        return $stmt;
     }
 
 }

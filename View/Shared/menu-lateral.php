@@ -7,55 +7,54 @@ and open the template in the editor.
 <div id="lateral">
     <div id="menu">
         <ul class="box">
-
             <li style="margin-top:3em">
                 <a href="home.php">
                     <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/black-inlay-crystal-clear-bubble-icons-business/077302-black-inlay-crystal-clear-bubble-icon-business-home5.png" style="width:100px">
                 </a>
             </li>
-                <li>
-                    <!--
-                    <a href="./index.php/myController/myActio/?id=1" 
-                    class="btn btn-success btn-block">mylinktext</a>
-                    -->
-                    <!--
-                    <form action="caminho/ProdutoController/insere" >
-                    -->                                       
-                    <a href="list.php">
-                        Meus Filmes
-                    </a>
-                </li>
-                <li>
-                    <a href="ranking.php">
-                        Meu Top 10
-                    </a>
-                </li>
-                <li>
-                    <a href="recomendations.php">
-                        Recomendações
-                    </a>
-                </li>
-                <li>
-                    <a href="not-seen.php">
-                        Não vistos
-                    </a>
-                </li>
-                <li>
-                    <a href="seen.php">
-                        Vistos
-                    </a>
-                </li>
+            <li>
+                <!--
+                <a href="./index.php/myController/myActio/?id=1" 
+                class="btn btn-success btn-block">mylinktext</a>
+                -->
+                <!--
+                <form action="caminho/ProdutoController/insere" >
+                -->                                       
+                <a href="list.php">
+                    Meus Filmes
+                </a>
+            </li>
+            <li>
+                <a href="ranking.php">
+                    Meu Top 10
+                </a>
+            </li>
+            <li>
+                <a href="recomendations.php">
+                    Recomendações
+                </a>
+            </li>
+            <li>
+                <a href="not-seen.php">
+                    Não vistos
+                </a>
+            </li>
+            <li>
+                <a href="seen.php">
+                    Vistos
+                </a>
+            </li>
 
-                <li>
-                    <a href="about.php">
-                        Sobre o Site
-                    </a>
-                </li>
-                <li>
-                    <a href="contacts.php">
-                        Contatos
-                    </a>
-                </li>
+            <li>
+                <a href="about.php">
+                    Sobre o Site
+                </a>
+            </li>
+            <li>
+                <a href="contacts.php">
+                    Contatos
+                </a>
+            </li>
         </ul>
 
     </div>

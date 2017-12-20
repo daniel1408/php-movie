@@ -15,6 +15,10 @@ class Movie {
     function getId() {
         return $this->id;
     }
+    
+    function getYear() {
+        return $this->year;
+    }
 
     function getTitle() {
         return $this->title;
@@ -114,6 +118,10 @@ class Movie {
 
     function setId($id) {
         $this->id = $id;
+    }
+    
+    function setYear($year) {
+        $this->year = $year;
     }
 
     function setTitle($title) {

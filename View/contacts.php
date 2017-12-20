@@ -19,7 +19,7 @@ and open the template in the editor.
                     <?php require_once ("Shared/menu-lateral.php"); ?>
                 </div >
                 <div class="col-md-10">
-                    <h2 style="text-align:center"><b>@ViewData["Message"]</b></h2>
+                    <h2 style="text-align:center"><b>Contatos</b></h2>
                     <hr>
                     <address>
                         One Daniel Way<br />
@@ -31,8 +31,10 @@ and open the template in the editor.
                         <strong>Suporte:</strong> <a href="mailto:Support@example.com">daniel-costa@ufu.br</a><br />
                         <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">dani.coen@hotmail.com</a>
 
-                        <h5 style="text-align:center"><b>Mais informações podem ser encontradas no espetacular site: www.google.com.br<b><h5>
                     </address>
+                    
+                    <img src="http://www.guidingstar.ca/movie_reel.jpg" style="width: 50%;">
+                    <h3 style="text-align:center"><b>Mais informações </b>podem ser encontradas no espetacular site: www.google.com.br</h3>
                 </div>
             </div>
         </div>

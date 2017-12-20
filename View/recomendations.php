@@ -19,37 +19,26 @@ and open the template in the editor.
                     <?php require_once ("Shared/menu-lateral.php"); ?>
                 </div >
                 <div class="col-md-10">
-                    <h2 style="text-align: center"><b>Recomendação do site</b></h2>
+                    <h2 style="text-align: center"><b>Recomendação</b></h2>
+                    <ul class="list-group">
+                    <?php
+                        require_once('../Model/MovieDao.php');
+                            try {
+                                $stmt = MovieDao::getRecomendations();                                
+                                while($row = $stmt->fetch()) {
+                        ?>
+                            
+                        <li class="list-group-item"><h5><?php echo $row['Title']?></h5></li>
+                            
+                        <?php
+
+                                 }
+                             } catch (PDOException $e) {
+                                 echo 'ERROR: ' . $e->getMessage();
+                             }
+                         ?> 
+                    </ul>
                     <h4 style="text-align: center">Estas são as recomendaçõs de filmes dadas por Daniel, o grande sábio da 7ª arte </h4>
-
-                    <table class="table">
-                        <tr>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Title)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.imdbRating)
-                            </th>
-                            <th>
-
-                            </th>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Title)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.imdbRating)
-                            </td>
-                            <td>
-                                <a class="btn btn-info" asp-controller="Filmes" asp-action="Adicionar"> 
-                                    Adicionar à minha lista
-                                </a>
-                            </td>
-                        </tr>
-
-                    </table>
                 </div>
             </div>
         </div>
