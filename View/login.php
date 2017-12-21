@@ -12,7 +12,7 @@
             <h3 class="title" ><b>Login</b></h3>
         </div>
         <form method="post" action="?go=logar">
-            <div class="container" style="width:25%; margin: 0 auto; background-color: white; padding: 15px; border-radius: 10px ">
+            <div class="container" style="width:35%; margin: 0 auto; background-color: white; padding: 15px; border-radius: 10px ">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
@@ -38,7 +38,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container" style="width:25%; margin: 0 auto; background-color: white; margin-top: 20px; padding: 3px; text-align: center;  border-radius: 10px">
+            <div class="container" style="width:35%; margin: 0 auto; background-color: white; margin-top: 20px; padding: 3px; text-align: center;  border-radius: 10px">
                 <b>Novo no site?</b>
                 <a href="./View/sign.php" class="btn btnSing">Crie uma conta</a>
             </div>

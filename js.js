@@ -7,53 +7,26 @@
 $(document).ready(function () {    
     $.ajaxSetup({ cache: false });
     $(".btnInfo").click(function () {
-        $("#details").load("View/details.php", function () {
+        
+        var id = $(this).data("value");
+        
+        $("#details").load("details.php?id="+id, function () {
             $('#myModal').modal("show");
         });
     });
 });
 
-$(document).ready(function () {    
-    $.ajaxSetup({ cache: false });
-    $(".btnAdd").click(function () {
-        
-        var id = $(this).data("value");
-
-        $("#add").load("/Home/Confirmation/" + id, function () {
-            $('#modalAdd').modal("show");
-        });
-    });
-});
-
-$(document).ready(function () {    
-    $.ajaxSetup({ cache: false });
-    $(".btnLogin").click(function () {
-
-        $("#login").load("View/System/login.php", function () {
-            $('#modalLogin').modal("show");
-        });
-    });
-});
-
-$(document).ready(function () {    
-    $.ajaxSetup({ cache: false });
-    $(".btnSing").click(function () {
-        $("#sing").load("View/System/sing.php", function () {
-            $('#modalSing').modal("show");
-        });
-    });
-});
-
+/*
 $(document).ready(function () {    
     $.ajaxSetup({ cache: false });
     $(".btnRemove").click(function () {
         var id = $(this).data("value");
         
-        $("#remove").load("/Filmes/Deletar/" + id, function () {
+        $("#remove").load("delete.php?id="+id, function () {
             $('#removeModal').modal("show");
         });
     });
-});
+});*/
 
 
 window.onload=function(){
@@ -70,8 +43,6 @@ window.onload=function(){
             var display = div.style.display;
             var transform = div.style.transform;
         }
-        
-        
             //  div.style.transform = 'translate(0px, 0)';
             
             if( display === 'none' ){

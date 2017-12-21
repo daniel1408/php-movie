@@ -4,6 +4,12 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+
+<?php
+    session_start();
+    if(isset($_SESSION['user']) && isset($_SESSION['pwd'])){
+?>
+
 <html>
     <head>
         <title>Meu TOP 10</title>
@@ -31,24 +37,34 @@ and open the template in the editor.
 //                                    });
                                 require_once('../Model/MovieDao.php');
                                 try {
-                                    $stmt = MovieDao::selectAll();
+                                    $parametro = filter_input(INPUT_GET, "parametro");
+                                    if($parametro){             
+                                        $stmt = MovieDao::selectLike($parametro);
+                                    }else{
+                                        $stmt = MovieDao::selectRanking();
+                                    }
+                                    $count = 1;
                                     while($row = $stmt->fetch()) {
-                                            if($row['userOption'] == 'Top 10'){
                                         ?>
-                                        <div class="card" style="width: 16rem;">
-                                            <div>
+                                        <div class="card" style="width: 13rem;">
+                                            <div style="background-color: black; color: white; font-size: 15px;">
+                                                <?php echo $count?>
+                                            </div>
+                                            
+                                            
+                                            <div style="font-size: 14px;">
                                                 <?php echo $row['Title']?>
                                             </div>
 
-                                            <a href="#" data-value="@item.Id" class="btnInfo">
+                                            <a href="#" data-value="<?php echo $row['id']?>" class="btnInfo">
                                                 <img class="card-img-top    " src="<?php echo $row['Poster']?>">
                                             </a>
-                                            <div>
+                                            <div style="background-color: black; color: white">
                                                 <h5>IMDB: <b> <?php echo $row['imdbRating']?></b></h5>
                                             </div>                    
                                         </div>
                                         <?php
-                                            }
+                                        $count++;
                                          }
                                      } catch (PDOException $e) {
                                          echo 'ERROR: ' . $e->getMessage();
@@ -73,12 +89,7 @@ and open the template in the editor.
     </div>
 </div>
 
-<div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div id="remove"></div>
-            </div>
-        </div>
-    </div>
-</div>
+<?php
+    } else {
+        header("location: ../index.php");
+    }

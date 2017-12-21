@@ -31,6 +31,13 @@ class MovieDao implements IDao{
         
     }
     
+    public function selectRanking() {
+        $conn = MovieDao::connectionString();
+        $stmt = $conn->prepare("SELECT * FROM movie where userOption = 'Top 10' order by imdbRating desc limit 10");
+        $stmt->execute();
+        return $stmt; 
+    }
+    
     public function selectLike($texto) {
         $conn = MovieDao::connectionString();
         $stmt = $conn->prepare("SELECT * FROM movie where Title like '$texto%' order by id");
@@ -52,7 +59,9 @@ class MovieDao implements IDao{
     }
 
     public function delete($object) {
-        
+        $conn = MovieDao::connectionString();
+        $stmt = $conn->prepare("delete from movie where id = '$object'");
+        $stmt->execute();        
     }
 
     public function update($object) {
@@ -62,7 +71,7 @@ class MovieDao implements IDao{
     
     public function getRecomendations() {
         $conn = MovieDao::connectionString();
-        $stmt = $conn->prepare("SELECT * FROM recomendations order by Title");
+        $stmt = $conn->prepare("SELECT * FROM recomendations order by id");
         $stmt->execute();
         return $stmt;
     }

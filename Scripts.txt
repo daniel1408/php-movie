@@ -1,0 +1,6 @@
+create table users(id int primary key auto_increment, nome varchar(100), login varchar(30), senha varchar(100));
+
+create table movie( id int NOT NULL AUTO_INCREMENT, Title varchar(1000) NOT NULL, Year varchar(100) NOT NULL, Rated varchar(1000), Genre varchar(1000), Director varchar(1000), Writer varchar(1000), Actors varchar(1000), Plot varchar(5000), Country varchar(1000), Poster varchar(5000), imdbRating varchar(1000), userOption varchar(1000), PRIMARY KEY (id));
+
+create table recomendations(id int NOT NULL AUTO_INCREMENT, Title varchar(1000), primary key(id));
+

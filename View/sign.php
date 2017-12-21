@@ -9,10 +9,10 @@
     <body style="background-color: #F2F2F2; color: black;">
         <div class="panel-title text-center">
             <img src="https://leipglo.files.wordpress.com/2015/05/moviesomu.png?w=300&resize=300%2C223" style="width: 100px">
-            <h3 class="title" ><b>Login</b></h3>
+            <h3 class="title" ><b>Criar Conta</b></h3>
         </div>
         <form method="post" action="?go=cadastrar">
-            <div class="container" style="width:25%; margin: 0 auto; background-color: white; padding: 15px; border-radius: 10px ">
+            <div class="container" style="width:35%; margin: 0 auto; background-color: white; padding: 15px; border-radius: 10px ">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">

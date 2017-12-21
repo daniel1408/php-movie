@@ -16,7 +16,7 @@ and open the template in the editor.
         <?php require_once ("Shared/imports.php"); ?>
     </head>
     
-    <body>        
+    <body >        
         <?php require_once ("Shared/menu-principal.php"); ?>
     
         <div class="container">
@@ -49,22 +49,23 @@ and open the template in the editor.
                                         }
                                         while($row = $stmt->fetch()) {
                                 ?>
-                                <div class="card" style="width: 13.0rem;">
+                                <div class="card" style="width: 16.0rem;">
                                     <div style="background-color: black; color: white">
                                         <h5>IMDB: <b> <?php echo $row['imdbRating']?></b></h5>
                                     </div>                    
                                     <p><?php echo $row['userOption']?></p>
-                                    <a href="details.php?id=<?php echo $row['id']?>" class="btnInfo"> 
+                                    <a href="#" data-value="<?php echo $row['id']?>" class="btnInfo"> 
                                         <img class="card-img-top" src="<?php echo $row['Poster']?>" alt="Card image cap">
                                     </a>
 
                                     <div>
-                                        <p class="card-title"><?php echo $row['Title']?></p>
+                                        <p class="card-title" ><?php echo $row['Title']?></p>
                                     </div>
-                                    <a href="#" data-value="<?php echo $row['id']?>" class="btnRemove">
+                                    <a href="delete.php?id=<?php echo $row['id']?>" class="btnRemove btn">
                                         Remover
                                     </a>
                                 </div>
+                                
                                 <?php
 
                                          }
@@ -91,15 +92,6 @@ and open the template in the editor.
     </div>
 </div>
 
-<div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div id="remove"></div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <?php
     } else {

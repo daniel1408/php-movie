@@ -30,11 +30,6 @@ and open the template in the editor.
                 </a>
             </li>
             <li>
-                <a href="recomendations.php">
-                    Recomendações
-                </a>
-            </li>
-            <li>
                 <a href="not-seen.php">
                     Não vistos
                 </a>
@@ -44,7 +39,11 @@ and open the template in the editor.
                     Vistos
                 </a>
             </li>
-
+            <li>
+                <a href="recomendations.php">
+                    Recomendações
+                </a>
+            </li>
             <li>
                 <a href="about.php">
                     Sobre o Site
