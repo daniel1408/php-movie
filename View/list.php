@@ -30,14 +30,14 @@ and open the template in the editor.
                             <div class="col-md-12">
                                 <h2 style="text-align: center"><b>Minha Lista</b></h2>
 
-                                <a class="btn  my-btn" href="add.php"> 
+                                <a class="btn my-btn" href="add.php"> 
                                     Encontrar Novo Filme
                                 </a>
 
                                 <hr>
                                 <?php
 //                                    spl_autoload_register(function ($class_name) {
-//                                        include './Model/' . $class_name . '.php';
+//                                        require_once './Model/' . $class_name . '.php';
 //                                    });
                                 require_once('../Model/MovieDao.php');
                                     try {
@@ -49,21 +49,29 @@ and open the template in the editor.
                                         }
                                         while($row = $stmt->fetch()) {
                                 ?>
-                                <div class="card" style="width: 16.0rem;">
-                                    <div style="background-color: black; color: white">
-                                        <h5>IMDB: <b> <?php echo $row['imdbRating']?></b></h5>
-                                    </div>                    
-                                    <p><?php echo $row['userOption']?></p>
+                                
+                                <div class="card" style="width: 13.0rem;">
+                                    <div style="background-color: rgb(8, 14, 20); color: white;">
+                                        <h5><b> <?php echo $row['userOption']?></b></h5>
+                                    </div>
+                                    
+                                    <div style="width: 95% ;margin: 0px; font-size: 12px; color: black; background-color: white; text-overflow: ellipsis; overflow: hidden; white-space: nowrap" >
+                                        <p style="padding:0 10px"><?php echo $row['Title']?></p>
+                                    </div>
+                                    
+                                    <!--<p><?php echo $row['userOption']?></p>-->
+                                    
                                     <a href="#" data-value="<?php echo $row['id']?>" class="btnInfo"> 
                                         <img class="card-img-top" src="<?php echo $row['Poster']?>" alt="Card image cap">
                                     </a>
-
-                                    <div>
-                                        <p class="card-title" ><?php echo $row['Title']?></p>
-                                    </div>
+                                    
                                     <a href="delete.php?id=<?php echo $row['id']?>" class="btnRemove btn">
                                         Remover
                                     </a>
+                                    
+                                    <div style="border: 2px solid white; background-color: rgb(8, 14, 20); color: white; width: 30%; position:relative; float: right; margin-top: -200px; margin-right: -10px; border-radius: 10px">
+                                        <h5><b> <?php echo $row['imdbRating']?></b></h5>
+                                    </div>
                                 </div>
                                 
                                 <?php

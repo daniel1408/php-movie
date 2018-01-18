@@ -28,10 +28,11 @@
 
             <div class="card" style="width: 20rem;">
                 <img class="card-img-top" src="<?php echo $row['Poster']?>" alt="Card image cap">
-                <div>
+                <div style="width: 110%; height: 40px; margin: 0px -10px ; font-size: 12px; border: 1px solid black; border-radius: 10px; color: black; background-color: white; box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.74);" >
                     <h4>IMDB: <b><?php echo $row['imdbRating']?></b></h4>
-                </div>     
+                </div>
             </div>
+            
         </div>
 
         <div class="col-md-8">

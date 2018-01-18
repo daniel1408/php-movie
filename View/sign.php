@@ -12,7 +12,7 @@
             <h3 class="title" ><b>Criar Conta</b></h3>
         </div>
         <form method="post" action="?go=cadastrar">
-            <div class="container" style="width:35%; margin: 0 auto; background-color: white; padding: 15px; border-radius: 10px ">
+            <div class="container" style="width:25%; margin: 0 auto; background-color: white; padding: 15px; border-radius: 10px ">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">

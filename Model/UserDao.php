@@ -17,7 +17,8 @@ class UserDao implements IDao{
     //put your code here
     public function connectionString(){
         ini_set('default_charset', 'UTF-8');
-        $conn = new PDO('mysql:host=us-cdbr-azure-southcentral-f.cloudapp.net:3306;dbname=moviedb', "b7aaceb6e91495", "a8081f97");
+        //$conn = new PDO('mysql:host=us-cdbr-azure-southcentral-f.cloudapp.net:3306;dbname=moviedb', "b7aaceb6e91495", "a8081f97");
+        $conn = new PDO('mysql:host=127.0.0.1;dbname=moviedb', "daniel", "Furiosa");
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $conn->query("SET NAMES utf8"); 
         return $conn;

@@ -46,21 +46,20 @@ and open the template in the editor.
                                     $count = 1;
                                     while($row = $stmt->fetch()) {
                                         ?>
-                                        <div class="card" style="width: 13rem;">
-                                            <div style="background-color: black; color: white; font-size: 15px;">
-                                                <?php echo $count?>
+                                        <div class="card" style="width: 16rem;">
+                                            <div style="background-color: rgb(8, 14, 20); color: white; font-size: 15px;">
+                                                <?=$count?>
                                             </div>
                                             
-                                            
-                                            <div style="font-size: 14px;">
-                                                <?php echo $row['Title']?>
+                                            <div style="height:40px; white-space: nowrap; width: 90%; overflow: hidden; text-overflow: ellipsis; padding: 5px; font-size: 13px">
+                                                <p><?php echo $row['Title']?></p>
                                             </div>
 
                                             <a href="#" data-value="<?php echo $row['id']?>" class="btnInfo">
                                                 <img class="card-img-top    " src="<?php echo $row['Poster']?>">
                                             </a>
-                                            <div style="background-color: black; color: white">
-                                                <h5>IMDB: <b> <?php echo $row['imdbRating']?></b></h5>
+                                            <div style="background-color: rgb(8, 14, 20); color: white">
+                                                <h4>IMDB:<b> <?php echo $row['imdbRating']?></b></h4>
                                             </div>                    
                                         </div>
                                         <?php
